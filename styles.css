@@ -1,0 +1,259 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header .container, footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.site-nav a {
+    color: #87CEEB;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.site-nav a:hover {
+    color: #fff;
+}
+
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+    color: #87CEEB;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-info .details {
+    text-align: center;
+}
+
+.profile-info .details .social-icons a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.profile-info .details .social-icons a:hover {
+    color: #87CEEB;
+}
+
+.profile-info .address {
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+.profile-info .address:hover {
+    color: black;
+}
+
+.profile, .education, .experience {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile:hover, .education:hover, .experience:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.motto {
+    font-style: italic;
+    font-size: 18px;
+    color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-sm-6 {
+    flex: 1;
+    min-width: 300px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    .profile-info {
+        flex-direction: column;
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .address {
+        font-size: 12px;
+    }
+}
+
+
+/* Skills Section */
+.skill-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-cards {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.skill-card {
+    background-color: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 50%;
+    box-sizing: border-box;
+}
+
+.skill-card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.skill-card h3 {
+    color: black;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.skill-card p {
+    color: black;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
